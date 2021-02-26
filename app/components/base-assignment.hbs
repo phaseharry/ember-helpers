@@ -1,0 +1,10 @@
+{{yield}}
+<div>
+  <div>
+    Sum of:
+    {{#each this.allNums as |num|}}
+    <span> {{num}} </span>
+    {{/each}}
+    is equal to {{sum ...this.allNums}}
+  </div>
+</div>
