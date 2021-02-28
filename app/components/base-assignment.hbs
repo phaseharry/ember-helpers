@@ -2,9 +2,28 @@
 <div>
   <div>
     Sum of:
-    {{#each this.allNums as |num|}}
-    <span> {{num}} </span>
+    {{#each this.allNums as |val|}}
+    <span> {{val}} </span>
     {{/each}}
     is equal to {{sum ...this.allNums}}
+  </div>
+  <div>
+    Sum of:
+    {{#each this.notAllNums as |val|}}
+    <span> {{if val val "undefined/null"}} </span>
+    {{/each}}
+    is equal to {{sum ...this.notAllNums}}
+  </div>
+  <div>
+    5 vs 5 ? {{ if (eq 5 5) "true" "false" }}
+  </div>
+  <div>
+    5 vs 10 ? {{ if (eq 5 10) "true" "false" }}
+  </div>
+  <div>
+    10 vs 5 ? {{ if (eq 5 5) "true" "false" }}
+  </div>
+  <div>
+    5 vs 10 ? {{ if (gte 5 10) "true" "false" }}
   </div>
 </div>
